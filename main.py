@@ -82,7 +82,7 @@ def main():
     # PIE DE PAGINA
     tk.Label(
         ventana,
-        text="Proyecto academico de Python | UPN",
+        text="Desarrollo de Evaluación T1 | Grupo 9",
         font=("Arial", 9),
         fg="#64748B",
         bg="#F1F5F9"
