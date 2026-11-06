@@ -7,7 +7,7 @@ import time
 
 from parte_1_estructura_datos.actividad1 import pedidos
 
-from parte_3_ordenamientos.actividad3 import (
+from parte_3_ordenamiento.actividad3 import (
     ordenamiento_burbuja,
     ordenamiento_seleccion,
     ordenamiento_insercion
