@@ -1,30 +1,13 @@
-import tkinter as tk
 
-# Crear ventana
-ventana = tk.Tk()
-ventana.title("Mi primera ventana")
-ventana.geometry("350x200")
+# SISTEMA UPN CARGO S.A.C.
 
-# Etiqueta
-etiqueta = tk.Label(ventana, text="Ingrese su nombre:")
-etiqueta.pack(pady=10)
 
-# Campo de texto
-entrada = tk.Entry(ventana)
-entrada.pack()
+from parte_1_estructura_datos.interfaz1 import iniciar_interfaz
 
-# Función del botón
-def saludar():
-    nombre = entrada.get()
-    resultado.config(text="¡Hola " + nombre + "!")
 
-# Botón
-boton = tk.Button(ventana, text="Saludar", command=saludar)
-boton.pack(pady=10)
+def main():
+    iniciar_interfaz()
 
-# Resultado
-resultado = tk.Label(ventana, text="")
-resultado.pack()
 
-# Ejecutar ventana
-ventana.mainloop()
+if __name__ == "__main__":
+    main()
