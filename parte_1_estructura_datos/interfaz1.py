@@ -1,7 +1,6 @@
 
 # INTERFAZ GRAFICA - ACTIVIDAD 1
 
-
 import tkinter as tk
 from tkinter import ttk, messagebox
 
@@ -11,9 +10,10 @@ from parte_1_estructura_datos.actividad1 import (
 )
 
 
-def iniciar_interfaz():
+def iniciar_interfaz(parent):
 
-    ventana = tk.Tk()
+    # Crear ventana secundaria vinculada al menu principal
+    ventana = tk.Toplevel(parent)
     ventana.title("UPN CARGO S.A.C. - Gestion de Pedidos")
     ventana.geometry("1050x600")
     ventana.configure(bg="#F1F5F9")
@@ -144,7 +144,8 @@ def iniciar_interfaz():
         if not nombre:
             messagebox.showwarning(
                 "Busqueda",
-                "Ingrese el nombre o parte del nombre del cliente."
+                "Ingrese el nombre o parte del nombre del cliente.",
+                parent=ventana
             )
             return
 
@@ -155,7 +156,8 @@ def iniciar_interfaz():
         if not resultados:
             messagebox.showinfo(
                 "Resultado",
-                "No se encontraron pedidos."
+                "No se encontraron pedidos.",
+                parent=ventana
             )
 
     # FUNCION DEL BOTON LIMPIAR
@@ -188,4 +190,5 @@ def iniciar_interfaz():
     # MOSTRAR LOS 15 PEDIDOS AL INICIAR
     mostrar_pedidos(pedidos)
 
-    ventana.mainloop()
+    # Permitir cerrar esta actividad sin cerrar el menu principal
+    ventana.transient(parent)
