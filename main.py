@@ -7,6 +7,7 @@ from tkinter import ttk
 # IMPORTAR INTERFACES
 from parte_1_estructura_datos.interfaz1 import iniciar_interfaz
 from parte_2_busquedas.interfaz2 import iniciar_interfaz2
+from parte_3_ordenamiento.interfaz3 import iniciar_interfaz3
 
 
 def main():
@@ -78,6 +79,15 @@ def main():
         text="ACTIVIDAD 2 - ALGORITMOS DE BUSQUEDA",
         command=lambda: iniciar_interfaz2(ventana)
     ).pack(pady=12, ipadx=25, ipady=10)
+
+    # BOTON ACTIVIDAD 3
+    ttk.Button(
+        contenido,
+        text="ACTIVIDAD 3 - ALGORITMOS DE ORDENAMIENTO",
+        command=lambda: iniciar_interfaz3(ventana)
+    ).pack(pady=12, ipadx=25, ipady=10)
+
+
 
     # PIE DE PAGINA
     tk.Label(
