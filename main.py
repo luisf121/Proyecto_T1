@@ -7,14 +7,15 @@ from tkinter import ttk
 # IMPORTAR INTERFACES
 from parte_1_estructura_datos.interfaz1 import iniciar_interfaz
 from parte_2_busquedas.interfaz2 import iniciar_interfaz2
-
+from parte_3_ordenamiento.interfaz3 import iniciar_interfaz3
+from parte_4_algoritmos_voraces.interfaz4 import iniciar_interfaz4
 
 def main():
 
     # VENTANA PRINCIPAL
     ventana = tk.Tk()
     ventana.title("UPN CARGO S.A.C. - Sistema de Gestion Logistica")
-    ventana.geometry("750x500")
+    ventana.geometry("750x650")
     ventana.configure(bg="#F1F5F9")
     ventana.resizable(False, False)
 
@@ -78,7 +79,19 @@ def main():
         text="ACTIVIDAD 2 - ALGORITMOS DE BUSQUEDA",
         command=lambda: iniciar_interfaz2(ventana)
     ).pack(pady=12, ipadx=25, ipady=10)
+    # BOTON ACTIVIDAD 3
+    ttk.Button(
+        contenido,
+        text="ACTIVIDAD 3 - ALGORITMOS DE ORDENAMIENTO",
+        command=lambda: iniciar_interfaz3(ventana)
+    ).pack(pady=10, ipadx=25, ipady=8)
 
+    # BOTON ACTIVIDAD 4
+    ttk.Button(
+        contenido,
+        text="ACTIVIDAD 4 - ALGORITMOS VORACES",
+        command=lambda: iniciar_interfaz4(ventana)
+    ).pack(pady=10, ipadx=25, ipady=8)
     # PIE DE PAGINA
     tk.Label(
         ventana,
