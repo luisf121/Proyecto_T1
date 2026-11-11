@@ -9,13 +9,14 @@ from parte_1_estructura_datos.interfaz1 import iniciar_interfaz
 from parte_2_busquedas.interfaz2 import iniciar_interfaz2
 from parte_3_ordenamiento.interfaz3 import iniciar_interfaz3
 from parte_4_algoritmos_voraces.interfaz4 import iniciar_interfaz4
+from parte_5_ruta_arbol_minimo.interfaz5 import iniciar_interfaz5
 
 def main():
 
     # VENTANA PRINCIPAL
     ventana = tk.Tk()
     ventana.title("UPN CARGO S.A.C. - Sistema de Gestion Logistica")
-    ventana.geometry("750x650")
+    ventana.geometry("750x720")
     ventana.configure(bg="#F1F5F9")
     ventana.resizable(False, False)
 
@@ -91,6 +92,12 @@ def main():
         contenido,
         text="ACTIVIDAD 4 - ALGORITMOS VORACES",
         command=lambda: iniciar_interfaz4(ventana)
+    ).pack(pady=10, ipadx=25, ipady=8)
+    # BOTON ACTIVIDAD 5
+    ttk.Button(
+        contenido,
+        text="ACTIVIDAD 5 - RUTA Y ARBOL DE RECUBRIMIENTO MINIMO",
+        command=lambda: iniciar_interfaz5(ventana)
     ).pack(pady=10, ipadx=25, ipady=8)
     # PIE DE PAGINA
     tk.Label(
