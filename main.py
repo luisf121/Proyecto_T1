@@ -112,7 +112,7 @@ def main():
     ttk.Button(
     contenido,
     text="ACTIVIDAD 6 - PROBLEMA DE BACKTRACKING",
-    command=iniciar_interfaz6
+    command=lambda: iniciar_interfaz6(ventana)
     ).pack(pady=10, ipadx=25, ipady=8)
 
     # EJECUTAR SISTEMA
