@@ -2,8 +2,9 @@
 
 import tkinter as tk
 from tkinter import messagebox
+import time
 
-from actividad6 import formatear_ruta, generar_rutas_backtracking, respuesta_teorica
+from parte_6_problema_backtracking.actividad6 import (formatear_ruta, generar_rutas_backtracking, respuesta_teorica)
 
 
 ALMACENES = [
