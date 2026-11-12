@@ -10,7 +10,7 @@ from parte_2_busquedas.interfaz2 import iniciar_interfaz2
 from parte_3_ordenamiento.interfaz3 import iniciar_interfaz3
 from parte_4_algoritmos_voraces.interfaz4 import iniciar_interfaz4
 from parte_5_ruta_arbol_minimo.interfaz5 import iniciar_interfaz5
-from parte_6_problema_backtracking.interfaz6 import iniciar_interfaz6
+
 
 def main():
 
@@ -108,13 +108,8 @@ def main():
         fg="#64748B",
         bg="#F1F5F9"
     ).pack(side="bottom", pady=15)
-    # BOTÓN ACTIVIDAD 6
-    ttk.Button(
-    contenido,
-    text="ACTIVIDAD 6 - PROBLEMA DE BACKTRACKING",
-    command=lambda: iniciar_interfaz6(ventana)
-    ).pack(pady=10, ipadx=25, ipady=8)
-
+    
+    
     # EJECUTAR SISTEMA
     ventana.mainloop()
 
